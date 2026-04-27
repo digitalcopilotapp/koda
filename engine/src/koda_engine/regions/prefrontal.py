@@ -37,6 +37,19 @@ class PrefrontalCortex(Region):
             pattern = DRIVES.get(drive_name, drive_name)
             score = await self.motor.match(text, pattern)
             n.receive(score, source_text=text)
+        win = self.winning_drive()
+        if win:
+            await self.thalamus.publish(
+                Event(
+                    type="observation.note",
+                    payload={
+                        "kind": "drive_active",
+                        "content": f"drive activated: {win}",
+                        "source": self.name,
+                        "intensity": max(n.activation for n in self.neurons.values()),
+                    },
+                )
+            )
 
     def winning_drive(self) -> str | None:
         if not self.neurons:

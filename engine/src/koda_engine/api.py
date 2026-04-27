@@ -64,6 +64,55 @@ def create_app() -> FastAPI:
             ]
         }
 
+    @app.get("/memory/thoughts")
+    async def thoughts(limit: int = 100) -> list[dict]:
+        return await brain.memory.query(
+            "SELECT id, t, content, intensity, source_neuron, region, drive, emotion, episode_id, user_turn "
+            "FROM thoughts ORDER BY t DESC LIMIT ?",
+            (limit,),
+        )
+
+    @app.get("/memory/observations")
+    async def observations(limit: int = 100, kind: str | None = None) -> list[dict]:
+        if kind:
+            return await brain.memory.query(
+                "SELECT * FROM observations WHERE kind = ? ORDER BY t DESC LIMIT ?",
+                (kind, limit),
+            )
+        return await brain.memory.query(
+            "SELECT * FROM observations ORDER BY t DESC LIMIT ?",
+            (limit,),
+        )
+
+    @app.get("/memory/episodes")
+    async def episodes(limit: int = 50) -> list[dict]:
+        return await brain.memory.query(
+            "SELECT * FROM episodes ORDER BY t DESC LIMIT ?",
+            (limit,),
+        )
+
+    @app.get("/memory/utterances")
+    async def utterances(limit: int = 50) -> list[dict]:
+        return await brain.memory.query(
+            "SELECT * FROM utterances ORDER BY t DESC LIMIT ?",
+            (limit,),
+        )
+
+    @app.get("/memory/timeline")
+    async def timeline(limit: int = 200) -> list[dict]:
+        """Unified chronological log: every event ever recorded."""
+        return await brain.memory.query(
+            "SELECT id, type, t, payload FROM events ORDER BY t DESC LIMIT ?",
+            (limit,),
+        )
+
+    @app.get("/memory/turns")
+    async def turns(limit: int = 50) -> list[dict]:
+        return await brain.memory.query(
+            "SELECT * FROM turns ORDER BY t DESC LIMIT ?",
+            (limit,),
+        )
+
     @app.websocket("/ws")
     async def ws(websocket: WebSocket) -> None:
         await websocket.accept()

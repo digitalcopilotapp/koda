@@ -48,6 +48,14 @@ class Hippocampus(Region):
         anchor = Neuron(region=self.name, concept=f"episode:{label}" if label else "episode")
         anchor.synapses = [Synapse(target=mid, weight=0.5) for mid in members]
         await self.add_neuron(anchor)
+        # publish initial synapse events so the persistence layer records them
+        for mid in members:
+            await self.thalamus.publish(
+                Event(
+                    type="synapse.strengthen",
+                    payload={"from": anchor.id, "to": mid, "weight": 0.5, "delta": 0.5},
+                )
+            )
         self.episodes[ep_id] = {"id": ep_id, "label": label, "anchor": anchor.id, "members": members, "t": now}
         await self.thalamus.publish(
             Event(type="memory.encode", payload={"episode_id": ep_id, "anchor": anchor.id, "neurons": members, "label": label})
@@ -66,3 +74,15 @@ class Hippocampus(Region):
                         payload={"from": anchor_id, "to": mid, "weight": 0.4, "intensity": 0.3},
                     )
                 )
+            await self.thalamus.publish(
+                Event(
+                    type="observation.note",
+                    payload={
+                        "kind": "pattern_completion",
+                        "content": f"recalled episode {ep['id']}: {ep.get('label','')}",
+                        "source": self.name,
+                        "intensity": 0.6,
+                        "related": ep["members"],
+                    },
+                )
+            )

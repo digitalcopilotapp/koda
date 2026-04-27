@@ -16,6 +16,7 @@ EventType = Literal[
     "thought.surface",
     "user.turn",
     "broca.utterance",
+    "observation.note",
 ]
 
 

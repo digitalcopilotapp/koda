@@ -33,11 +33,21 @@ export type Thought = {
   t: number;
 };
 
+export type Observation = {
+  id: string;
+  t: number;
+  kind: string;
+  content: string;
+  source: string;
+  intensity: number;
+};
+
 type BrainState = {
   regions: Record<string, RegionInfo>;
   neurons: Record<string, NeuronNode>;
   synapses: Record<string, SynapseLink>;
   thoughts: Thought[];
+  observations: Observation[];
   utterances: { text: string; t: number }[];
   applyEvent: (ev: any) => void;
   applySnapshot: (snapshot: any) => void;
@@ -51,6 +61,7 @@ export const useBrain = create<BrainState>((set) => ({
   neurons: {},
   synapses: {},
   thoughts: [],
+  observations: [],
   utterances: [],
 
   applySnapshot: (snapshot) => {
@@ -160,6 +171,13 @@ export const useBrain = create<BrainState>((set) => ({
         }
         case "broca.utterance": {
           return { utterances: [...state.utterances, { text: ev.text, t }].slice(-6) };
+        }
+        case "observation.note": {
+          const next = [
+            ...state.observations,
+            { id: ev.id, t, kind: ev.kind, content: ev.content, source: ev.source, intensity: ev.intensity },
+          ];
+          return { observations: next.slice(-30) };
         }
         default:
           return state;

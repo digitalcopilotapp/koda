@@ -4,6 +4,7 @@ import { useBrain } from "../store/brainStore";
 export function Hud() {
   const regions = useBrain((s) => s.regions);
   const thoughts = useBrain((s) => s.thoughts);
+  const observations = useBrain((s) => s.observations);
   const utterances = useBrain((s) => s.utterances);
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
@@ -44,6 +45,17 @@ export function Hud() {
         {thoughts.slice().reverse().map((t) => (
           <div key={t.id + t.t} style={{ fontSize: 12, margin: "3px 0", opacity: 0.5 + 0.5 * t.intensity }}>
             <span style={{ color: "#fff2c2" }}>·</span> {t.content}
+          </div>
+        ))}
+      </div>
+
+      <div style={{ ...panelStyle, top: 16, left: "auto", right: 16, maxWidth: 360, maxHeight: 280, overflowY: "auto" }}>
+        <h3 style={h3}>observations</h3>
+        {observations.length === 0 && <div style={muted}>(no observations yet)</div>}
+        {observations.slice().reverse().map((o) => (
+          <div key={o.id + o.t} style={{ fontSize: 12, margin: "4px 0", lineHeight: 1.4 }}>
+            <span style={{ color: kindColor(o.kind), fontFamily: "monospace", fontSize: 10 }}>{o.kind}</span>{" "}
+            <span style={{ opacity: 0.85 }}>{o.content}</span>
           </div>
         ))}
       </div>
@@ -93,3 +105,12 @@ const btnStyle: React.CSSProperties = {
   padding: "0 20px", borderRadius: 8, border: "1px solid #2b3548",
   background: "#1a2438", color: "#e8ecf3", fontSize: 14, cursor: "pointer",
 };
+
+function kindColor(kind: string): string {
+  switch (kind) {
+    case "emotion_shift": return "#e85b6e";
+    case "drive_active": return "#3da9fc";
+    case "pattern_completion": return "#7a5af5";
+    default: return "#7a8499";
+  }
+}

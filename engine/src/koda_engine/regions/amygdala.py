@@ -25,6 +25,7 @@ class Amygdala(Region):
         super().__init__(*args, **kwargs)
         self.modulation: float = 1.0  # multiplier for plasticity
         self.last_emotion: str = ""
+        self._prev_emotion: str = ""
 
     async def boot(self) -> None:
         for emotion in EMOTIONS:
@@ -41,4 +42,17 @@ class Amygdala(Region):
         self.modulation = 1.0 + peak * 1.5
         if peak > 0.4:
             top = max(self.neurons.values(), key=lambda n: n.activation)
+            if top.concept != self._prev_emotion:
+                await self.thalamus.publish(
+                    Event(
+                        type="observation.note",
+                        payload={
+                            "kind": "emotion_shift",
+                            "content": f"shift: {self._prev_emotion or '∅'} → {top.concept}",
+                            "source": self.name,
+                            "intensity": peak,
+                        },
+                    )
+                )
+                self._prev_emotion = top.concept
             self.last_emotion = top.concept
