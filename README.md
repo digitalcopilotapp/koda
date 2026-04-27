@@ -7,7 +7,19 @@ Cognitive architecture inspired by the brain. The LLM is a stateless generative 
 - `engine/` — Python cognitive engine (motor, neurons, regions, thalamus, workspace, FastAPI + WebSocket).
 - `visualizer/` — React + react-three-fiber 3D graph that streams brain activity in real time.
 
-## Quickstart
+## Run on GitHub Codespaces (zero setup)
+
+1. On GitHub, open this repo and click **Code → Codespaces → Create codespace on `claude/rag-dual-consciousness-system-RC2JO`**.
+2. Wait for the post-create step to finish (installs Python deps, npm deps, and the `claude` CLI).
+3. Authenticate (pick one):
+   - **Subscription:** `claude login` and follow the prompt
+   - **API key:** open the Codespaces terminal and `export ANTHROPIC_API_KEY=sk-...` (or set it as a [Codespaces secret](https://github.com/settings/codespaces) so it's loaded automatically)
+4. `./dev.sh` — starts both servers and tails logs.
+5. Open the **Ports** tab in VS Code, find port `5173` (label *visualizer*), and click the globe icon to open it. Both ports are public-by-default in this devcontainer; if you'd rather keep them private, change `visibility` in `.devcontainer/devcontainer.json` and use the forwarded URL through your authenticated Codespaces session.
+
+The visualizer proxies `/turn`, `/state`, `/memory`, `/ws` to the engine on `localhost:8000` inside the codespace, so you only need to open the visualizer port.
+
+## Quickstart (local)
 
 ```bash
 # engine

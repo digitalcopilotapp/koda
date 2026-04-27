@@ -18,3 +18,8 @@ visualizer/dist/
 .vscode/
 .DS_Store
 *.tsbuildinfo
+
+# runtime
+.logs/
+*.db
+*.db-journal
