@@ -19,6 +19,7 @@ divergência, mais barato é incorporar atualizações do LearnHouse.
 
 ## Documentos
 
+- [`ambiente-local.md`](ambiente-local.md) — como rodar na sua máquina e as armadilhas do setup
 - [`curriculo.md`](curriculo.md) — desenho instrucional completo: trilhas, cursos, módulos,
   objetivos de aprendizagem e modelo de avaliação
 - [`mapeamento-plataforma.md`](mapeamento-plataforma.md) — como o currículo se traduz nos

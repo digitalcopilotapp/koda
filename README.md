@@ -15,12 +15,18 @@ Fork do [LearnHouse](https://github.com/learnhouse/learnhouse) (snapshot do upst
 
 ## Ambiente local
 
+Requisitos: Node.js ≥ 18 e Docker.
+
 ```bash
-npx learnhouse dev
+npx learnhouse dev --admin-email admin@funeralacademy.com.br --admin-password 'SuaSenhaAqui'
 ```
 
 Sobe PostgreSQL (com `pgvector`), Redis, API, Web e Collab com hot reload.
-Web em `http://localhost:3000`, API em `http://localhost:1338`.
+Web em `http://localhost:3000`, API em `http://localhost:1338`, Collab em `ws://localhost:4000`.
+
+Sem os parâmetros o CLI pergunta as credenciais de forma interativa (exige TTY).
+Armadilhas do setup — TLD reservado no e-mail, seed pela metade, cache do Redis — estão em
+[`docs/funeral-academy/ambiente-local.md`](docs/funeral-academy/ambiente-local.md).
 
 ---
 
