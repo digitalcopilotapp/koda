@@ -43,7 +43,10 @@ concurrency:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: learnhouse/app
+  # O upstream publica em ghcr.io/learnhouse/app. Derivar do próprio
+  # repositório mantém a imagem no namespace desta organização e dispensa
+  # secret novo — o GITHUB_TOKEN do job já tem acesso ao GHCR dela.
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build:

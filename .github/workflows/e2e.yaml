@@ -13,10 +13,12 @@ permissions:
 # It runs on demand and nightly, so it catches regressions in the shipped
 # self-host. To gate a PR on E2E, run it against an image built from the
 # branch (future enhancement).
+# O agendamento noturno do upstream foi removido: a suíte valida a imagem
+# PUBLICADA, e este fork ainda não publica uma. Rodar por cron aqui só
+# produziria uma falha por noite. Fica sob demanda até que o build-community
+# publique a imagem desta organização e a suíte seja apontada para ela.
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 3 * * *' # nightly at 03:00 UTC
 
 jobs:
   e2e:
