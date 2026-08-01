@@ -159,12 +159,12 @@ export const OrgMenu = (props: any) => {
                   {org?.logo_image ? (
                     <img
                       src={`${getOrgLogoMediaDirectory(org.org_uuid, org?.logo_image)}`}
-                      alt="Learnhouse"
+                      alt={org?.name ?? ''}
                       style={{ width: 'auto', height: '100%' }}
                       className="rounded-md"
                     />
                   ) : (
-                    <LearnHouseLogo logoFilter={colors.logoFilter} />
+                    <OrgWordmark name={org?.name ?? ''} textClass={colors.text} />
                   )}
                 </div>
               </Link>
@@ -557,14 +557,13 @@ const CopilotMenuButton = ({
   )
 }
 
-const LearnHouseLogo = ({ logoFilter }: { logoFilter: string }) => {
+// Fallback shown when the organization has not uploaded a logo. Upstream falls
+// back to the LearnHouse wordmark; a self-branded deployment must never show a
+// third party's mark as its own, so we render the organization name instead.
+const OrgWordmark = ({ name, textClass }: { name: string; textClass: string }) => {
   return (
-    <Image
-      src="/lrn-text.svg"
-      alt="LearnHouse logo"
-      width={133}
-      height={40}
-      style={{ height: 'auto', filter: logoFilter }}
-    />
+    <span className={`text-lg font-bold tracking-tight whitespace-nowrap ${textClass}`}>
+      {name}
+    </span>
   )
 }

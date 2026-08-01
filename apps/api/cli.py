@@ -84,10 +84,10 @@ async def _install_async(short: bool) -> None:
                 print("Default elements installed ✅")
 
                 # Honor LEARNHOUSE_INITIAL_ORG_NAME / LEARNHOUSE_INITIAL_ORG_SLUG when
-                # the CLI passes them — falls back to "Default Organization" / "default"
-                # so existing standalone deployments still work unchanged.
-                org_name = os.environ.get("LEARNHOUSE_INITIAL_ORG_NAME", "Default Organization")
-                org_slug = os.environ.get("LEARNHOUSE_INITIAL_ORG_SLUG", "default").lower()
+                # the CLI passes them — falls back to the Funeral Academy defaults
+                # so a fresh install already comes up branded.
+                org_name = os.environ.get("LEARNHOUSE_INITIAL_ORG_NAME", "Funeral Academy")
+                org_slug = os.environ.get("LEARNHOUSE_INITIAL_ORG_SLUG", "funeral-academy").lower()
 
                 # Create the Organization
                 print(f"Creating organization '{org_name}' (slug: {org_slug})...")

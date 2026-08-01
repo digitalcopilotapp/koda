@@ -121,7 +121,10 @@ function useContentReady(activityType: string, activitySubType?: string) {
 function EmbedActivityClient({ activityId, courseuuid, orgslug, bgcolor }: EmbedActivityClientProps) {
   const { t } = useTranslation()
   const searchParams = useSearchParams()
-  const showLearnHouseLogo = searchParams.get('showlearnhouselogo') !== 'false'
+  // Self-branded deployment: the upstream LearnHouse badge never renders on
+  // embeds. Kept as a constant (rather than removing the call sites) so future
+  // upstream merges stay clean.
+  const showLearnHouseLogo = false
   const textColor = searchParams.get('textcolor')
 
   const { data: activity, isLoading: activityLoading } = useActivity(activityId)

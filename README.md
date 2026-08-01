@@ -1,6 +1,31 @@
-> **Koda LMS** — este repositório foi inicializado a partir do
-> [LearnHouse](https://github.com/learnhouse/learnhouse) (upstream `c8d76f6`, jul/2026), licenciado sob AGPL-3.0.
-> O conteúdo abaixo é o README original do projeto upstream.
+# Funeral Academy
+
+Plataforma de formação profissional para **agentes funerários e profissionais do setor
+funerário**, em português do Brasil.
+
+Fork do [LearnHouse](https://github.com/learnhouse/learnhouse) (snapshot do upstream
+`c8d76f6`, jul/2026), licenciado sob AGPL-3.0.
+
+## Documentação do projeto
+
+- [Visão geral do fork](docs/funeral-academy/README.md) — o que muda em relação ao upstream
+- [Currículo](docs/funeral-academy/curriculo.md) — trilhas, cursos, objetivos e avaliação
+- [Mapeamento para a plataforma](docs/funeral-academy/mapeamento-plataforma.md)
+- [Implantação](docs/funeral-academy/implantacao.md) — roadmap e dívidas técnicas
+
+## Ambiente local
+
+```bash
+npx learnhouse dev
+```
+
+Sobe PostgreSQL (com `pgvector`), Redis, API, Web e Collab com hot reload.
+Web em `http://localhost:3000`, API em `http://localhost:1338`.
+
+---
+
+<details>
+<summary>README original do LearnHouse (upstream)</summary>
 
 <p align="center">
   <a href="https://learnhouse.app">
@@ -144,3 +169,5 @@ Thank you and have fun using/developing/testing LearnHouse !
 ## 📄 License
 
 [AGPL-3.0](LICENSE) — Enterprise features are available under a separate Enterprise License.
+
+</details>

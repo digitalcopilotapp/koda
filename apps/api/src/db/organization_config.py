@@ -216,9 +216,11 @@ class GeneralCustomization(BaseModel):
     color: str = ""
     footer_text: str = ""
     favicon_image: str = ""
-    watermark: bool = True
+    # Self-branded deployment: the upstream watermark is never rendered.
+    watermark: bool = False
     font: str = ""
-    default_language: str = "en"
+    # Funeral Academy serves a Brazilian audience — pt is the product default.
+    default_language: str = "pt"
 
 
 class SeoOrgConfig(BaseModel):
