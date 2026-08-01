@@ -1,0 +1,12 @@
+<svg width="304" height="152" viewBox="0 0 304 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Funeral Academy. Um arco: limiar de passagem, e arquitetura clássica de
+       academia. Geometria pura, sem texto, para permanecer legível a 20px.
+       viewBox mantido em 304x152 (o do upstream) para não mexer em layout. -->
+  <g transform="translate(114 26)" fill="none" stroke="black" stroke-width="11"
+     stroke-linecap="round" stroke-linejoin="round">
+    <!-- arco: pilares + volta redonda -->
+    <path d="M6 100 V44 A32 32 0 0 1 70 44 V100"/>
+    <!-- base -->
+    <path d="M0 100 H76"/>
+  </g>
+</svg>
