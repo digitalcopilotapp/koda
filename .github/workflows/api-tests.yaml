@@ -52,13 +52,10 @@ jobs:
         env:
           TESTING: "true"
 
-      - name: Upload API coverage to Codecov
-        uses: codecov/codecov-action@v7
-        with:
-          files: apps/api/coverage.xml
-          flags: api
-          name: api-coverage
-          fail_ci_if_error: true
+      # O upstream envia a cobertura para a conta Codecov da LearnHouse, com
+      # fail_ci_if_error: true. Sem CODECOV_TOKEN aqui, o passo derrubava o job
+      # inteiro mesmo com a suíte verde. A cobertura continua disponível no
+      # artefato abaixo; para voltar a publicar, cadastre um token próprio.
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v7
