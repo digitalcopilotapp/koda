@@ -1,0 +1,385 @@
+{
+  "_comment": "Estrutura curricular da Funeral Academy. Ver docs/funeral-academy/curriculo.md para o desenho instrucional completo. Os módulos são estrutura pedagógica — o conteúdo de cada lição precisa de validação por responsável técnico e assessoria jurídica antes de ir ao ar.",
+  "trilhas": [
+    {
+      "codigo": "nucleo",
+      "nome": "Núcleo Comum",
+      "descricao": "Obrigatório para toda função. Nenhum profissional chega à operação sem biossegurança e acolhimento.",
+      "cursos": [
+        {
+          "codigo": "FA-101",
+          "nome": "Introdução ao Setor Funerário no Brasil",
+          "descricao": "Panorama do setor, cadeia de serviços e o lugar da sua função dentro dela.",
+          "aprendizados": [
+            "Descrever o fluxo completo de um atendimento, do óbito ao sepultamento ou cremação",
+            "Identificar qual órgão acionar em cada tipo de óbito",
+            "Situar a própria função dentro da cadeia de serviços"
+          ],
+          "modulos": [
+            "1. O setor funerário brasileiro: números, atores e regulação",
+            "2. A cadeia de serviços: funerária, cemitério, crematório, cartório",
+            "3. Tipos de óbito e o órgão competente: natural, violento, sem assistência",
+            "4. Funções e responsabilidades na operação",
+            "5. O fluxo completo de um atendimento, ponta a ponta"
+          ]
+        },
+        {
+          "codigo": "FA-102",
+          "nome": "Legislação e Documentação do Óbito",
+          "descricao": "Documentação exigida em cada modalidade de óbito, prazos legais e translado.",
+          "aprendizados": [
+            "Preencher e conferir a documentação exigida em cada modalidade de óbito",
+            "Identificar pendências documentais que impedem sepultamento ou cremação",
+            "Executar o procedimento de translado conforme exigência de destino"
+          ],
+          "modulos": [
+            "1. Declaração de Óbito: quem emite, o que conferir",
+            "2. Registro civil e Certidão de Óbito: prazos e competência",
+            "3. Óbito fetal, em via pública e sem assistência médica",
+            "4. Documentação específica para cremação",
+            "5. Translado intermunicipal, interestadual e internacional",
+            "6. Pendências que travam o sepultamento: como antecipar"
+          ]
+        },
+        {
+          "codigo": "FA-103",
+          "nome": "Biossegurança e Saúde Ocupacional",
+          "descricao": "Risco biológico, EPIs, descarte de resíduos e proteção do profissional.",
+          "aprendizados": [
+            "Selecionar e vestir corretamente o EPI adequado a cada situação",
+            "Executar o descarte de resíduos conforme classificação",
+            "Aplicar o protocolo específico para óbito com suspeita de doença transmissível"
+          ],
+          "modulos": [
+            "1. Risco biológico no serviço funerário",
+            "2. NR-32 aplicada à operação",
+            "3. EPIs: seleção, paramentação e desparamentação",
+            "4. Resíduos de Serviços de Saúde: classificação e descarte",
+            "5. Óbitos por doenças infectocontagiosas: protocolo",
+            "6. Imunização e saúde do profissional"
+          ]
+        },
+        {
+          "codigo": "FA-104",
+          "nome": "Acolhimento e Comunicação com a Família Enlutada",
+          "descricao": "Teoria do luto aplicada, comunicação de notícias difíceis e manejo de reações intensas.",
+          "aprendizados": [
+            "Conduzir o primeiro contato com a família aplicando protocolo de acolhimento",
+            "Responder a reações de negação, raiva e colapso sem escalar o conflito",
+            "Reconhecer sinais de luto complicado e encaminhar adequadamente"
+          ],
+          "modulos": [
+            "1. O que é o luto: das tarefas de Worden à prática",
+            "2. O primeiro contato: telefone e presencial",
+            "3. Comunicação de notícias difíceis",
+            "4. Escuta ativa e manejo de reações intensas",
+            "5. Óbito infantil e o luto de crianças",
+            "6. Luto complicado: reconhecer e encaminhar"
+          ]
+        },
+        {
+          "codigo": "FA-105",
+          "nome": "Ética Profissional, LGPD e Conduta",
+          "descricao": "Sigilo, dignidade do falecido, dados sensíveis e limites da captação.",
+          "aprendizados": [
+            "Classificar condutas como aderentes ou violadoras do código de conduta",
+            "Aplicar as regras de tratamento de dados pessoais de falecidos e famílias"
+          ],
+          "modulos": [
+            "1. Dignidade do falecido e sigilo profissional",
+            "2. LGPD aplicada: dados de falecidos e de famílias",
+            "3. Conduta em redes sociais e uso de imagem",
+            "4. Captação irregular: onde está a linha",
+            "5. Relação com hospitais, IML e SVO"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "operacoes",
+      "nome": "Operações Funerárias",
+      "descricao": "Trilha do agente funerário. Pré-requisito: Núcleo Comum.",
+      "cursos": [
+        {
+          "codigo": "FA-201",
+          "nome": "Remoção e Translado",
+          "descricao": "Remoção em domicílio, hospital, via pública e IML; acondicionamento e transporte.",
+          "aprendizados": [
+            "Executar a remoção em cada cenário respeitando protocolo e documentação",
+            "Acondicionar e transportar o corpo com segurança e dignidade"
+          ],
+          "modulos": [
+            "1. Remoção em domicílio: chegada, abordagem e execução",
+            "2. Remoção hospitalar e trâmites internos",
+            "3. Remoção em via pública e casos com autoridade policial",
+            "4. Retirada no IML e no SVO",
+            "5. Acondicionamento, higienização inicial e transporte"
+          ]
+        },
+        {
+          "codigo": "FA-202",
+          "nome": "Preparação Básica e Higienização",
+          "descricao": "Higienização, tamponamento básico, vestimenta e acondicionamento em urna.",
+          "aprendizados": [
+            "Executar a higienização e o tamponamento básico com biossegurança",
+            "Vestir e acondicionar o corpo preservando a apresentação para o velório"
+          ],
+          "modulos": [
+            "1. Preparo do ambiente e paramentação",
+            "2. Higienização do corpo",
+            "3. Tamponamento básico",
+            "4. Vestimenta e posicionamento",
+            "5. Acondicionamento em urna"
+          ]
+        },
+        {
+          "codigo": "FA-203",
+          "nome": "Ornamentação e Montagem do Velório",
+          "descricao": "Montagem de sala, ornamentação, equipamentos e logística.",
+          "aprendizados": [
+            "Montar a sala de velório conforme o padrão contratado",
+            "Operar os equipamentos de conservação e iluminação com segurança"
+          ],
+          "modulos": [
+            "1. Tipos de sala e padrões de serviço",
+            "2. Ornamentação floral e composição visual",
+            "3. Equipamentos: conservação, iluminação e som",
+            "4. Logística: prazos, transporte e equipe",
+            "5. Recepção da família e condução do ambiente"
+          ]
+        },
+        {
+          "codigo": "FA-204",
+          "nome": "Cerimonial e Diversidade Religiosa",
+          "descricao": "Ritos das principais tradições religiosas do Brasil e cerimônias laicas. Erro de rito é lido pela família como desrespeito, não como desconhecimento.",
+          "aprendizados": [
+            "Identificar as exigências rituais de cada tradição antes da cerimônia",
+            "Conduzir o cerimonial respeitando prazos, gestos e vedações de cada rito"
+          ],
+          "modulos": [
+            "1. Como perguntar à família sobre o rito, sem constrangimento",
+            "2. Rito católico",
+            "3. Ritos evangélicos e suas variações",
+            "4. Rito espírita",
+            "5. Religiões de matriz africana: umbanda e candomblé",
+            "6. Rito judaico: prazos e vedações",
+            "7. Rito islâmico: prazos e vedações",
+            "8. Rito budista e outras tradições orientais",
+            "9. Cerimônias laicas e personalizadas",
+            "10. O que nunca fazer: erros por tradição"
+          ]
+        },
+        {
+          "codigo": "FA-205",
+          "nome": "Sepultamento, Cremação e Exumação",
+          "descricao": "Procedimentos em cemitério, cremação, exumação e translado de restos mortais.",
+          "aprendizados": [
+            "Conduzir o sepultamento e a cremação conforme exigência documental e do local",
+            "Executar exumação e translado de restos mortais dentro do rito legal"
+          ],
+          "modulos": [
+            "1. Tipos de sepultamento e estruturas de cemitério",
+            "2. Condução do cortejo e do sepultamento",
+            "3. Cremação: documentação, processo e entrega das cinzas",
+            "4. Exumação: quando ocorre e como se conduz",
+            "5. Translado de restos mortais"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "tanatopraxia",
+      "nome": "Tanatopraxia",
+      "descricao": "Pré-requisito: Núcleo Comum + FA-202. A plataforma cobre fundamentação, protocolos e decisão clínica — NÃO substitui prática supervisionada presencial sob responsável técnico habilitado.",
+      "cursos": [
+        {
+          "codigo": "FA-301",
+          "nome": "Anatomia e Tanatologia Aplicada",
+          "descricao": "Fenômenos cadavéricos, cronotanatognose e anatomia vascular aplicada.",
+          "aprendizados": [
+            "Identificar os fenômenos cadavéricos e o que cada um indica",
+            "Localizar os pontos vasculares usados na conservação"
+          ],
+          "modulos": [
+            "1. Fenômenos cadavéricos abióticos e transformativos",
+            "2. Cronotanatognose: estimar o tempo decorrido",
+            "3. Anatomia vascular aplicada à injeção arterial",
+            "4. Alterações que afetam a conservação"
+          ]
+        },
+        {
+          "codigo": "FA-302",
+          "nome": "Técnicas de Conservação e Tanatopraxia",
+          "descricao": "Injeção arterial, drenagem, cavidades e soluções conservantes.",
+          "aprendizados": [
+            "Selecionar a solução e a concentração adequadas ao caso",
+            "Executar o protocolo de injeção arterial, drenagem e tratamento de cavidades"
+          ],
+          "modulos": [
+            "1. Soluções conservantes: composição e escolha",
+            "2. Injeção arterial: acessos e técnica",
+            "3. Drenagem venosa",
+            "4. Tratamento de cavidades",
+            "5. Avaliação do resultado e correções"
+          ]
+        },
+        {
+          "codigo": "FA-303",
+          "nome": "Necromaquiagem e Restauração",
+          "descricao": "Caracterização, correção de coloração e restauração de tecidos.",
+          "aprendizados": [
+            "Corrigir coloração e aparência preservando naturalidade",
+            "Executar restaurações compatíveis com o velório de caixão aberto"
+          ],
+          "modulos": [
+            "1. Princípios de caracterização post-mortem",
+            "2. Correção de coloração",
+            "3. Restauração de tecidos e preenchimentos",
+            "4. Cabelo, barba e apresentação final",
+            "5. Trabalhando a partir de uma fotografia da pessoa"
+          ]
+        },
+        {
+          "codigo": "FA-304",
+          "nome": "Casos Especiais",
+          "descricao": "Trauma, autópsia prévia, doença infectocontagiosa, óbito infantil e corpos em decomposição.",
+          "aprendizados": [
+            "Adaptar o protocolo de conservação a cada caso especial",
+            "Decidir quando o caixão aberto é inviável e comunicar isso à família"
+          ],
+          "modulos": [
+            "1. Corpos com trauma extenso",
+            "2. Corpos com autópsia prévia",
+            "3. Doenças infectocontagiosas: protocolo reforçado",
+            "4. Óbito infantil e neonatal",
+            "5. Corpos em decomposição avançada",
+            "6. Quando dizer não à família, e como"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "comercial",
+      "nome": "Atendimento e Planos",
+      "descricao": "Trilha do consultor e do atendente. Pré-requisito: Núcleo Comum.",
+      "cursos": [
+        {
+          "codigo": "FA-401",
+          "nome": "Planos Funerários e Regulação",
+          "descricao": "Modalidades, regulação aplicável, contratos, carências e direitos do consumidor.",
+          "aprendizados": [
+            "Explicar cada modalidade de plano e suas carências sem induzir a erro",
+            "Identificar cláusulas contratuais que geram disputa"
+          ],
+          "modulos": [
+            "1. Modalidades de plano funerário no Brasil",
+            "2. Regulação aplicável e limites de atuação",
+            "3. Contrato: cláusulas, carências e exclusões",
+            "4. Direitos do consumidor aplicados ao setor",
+            "5. Portabilidade, cancelamento e inadimplência"
+          ]
+        },
+        {
+          "codigo": "FA-402",
+          "nome": "Venda Consultiva com Sensibilidade",
+          "descricao": "Atendimento a família em luto, apresentação de opções sem pressão e tratamento de objeções. Treina explicitamente a diferença entre orientar uma família vulnerável e explorá-la.",
+          "aprendizados": [
+            "Apresentar opções de serviço sem explorar a vulnerabilidade do momento",
+            "Conduzir objeções sem pressão, mantendo a decisão com a família",
+            "Reconhecer e recusar práticas de venda abusiva"
+          ],
+          "modulos": [
+            "1. O contexto da decisão: quem decide, sob que pressão",
+            "2. Apresentar opções com clareza de preço e escopo",
+            "3. Objeções: escutar antes de responder",
+            "4. Venda abusiva: casos reais e o que fazer diferente",
+            "5. Fechamento respeitoso e registro do combinado"
+          ]
+        },
+        {
+          "codigo": "FA-403",
+          "nome": "Pós-venda, Retenção e Reputação",
+          "descricao": "Acompanhamento pós-cerimônia, pesquisa de satisfação e gestão de reclamações.",
+          "aprendizados": [
+            "Conduzir o contato pós-cerimônia sem constranger a família",
+            "Tratar reclamações preservando a relação e a reputação"
+          ],
+          "modulos": [
+            "1. O contato pós-cerimônia: quando e como",
+            "2. Pesquisa de satisfação em contexto de luto",
+            "3. Gestão de reclamações e reparação",
+            "4. Reputação online e resposta pública"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "gestao",
+      "nome": "Gestão do Negócio Funerário",
+      "descricao": "Trilha do gestor de funerária ou cemitério. Pré-requisito: Núcleo Comum.",
+      "cursos": [
+        {
+          "codigo": "FA-501",
+          "nome": "Gestão Operacional",
+          "descricao": "Escala de plantão, frota, estoque e tempo de resposta.",
+          "aprendizados": [
+            "Dimensionar escala e frota para o volume de chamadas",
+            "Controlar estoque de urnas e insumos sem ruptura nem excesso"
+          ],
+          "modulos": [
+            "1. Escala de plantão e cobertura 24h",
+            "2. Gestão de frota e manutenção",
+            "3. Estoque de urnas e insumos",
+            "4. Tempo de resposta: medir e reduzir"
+          ]
+        },
+        {
+          "codigo": "FA-502",
+          "nome": "Licenciamento e Compliance",
+          "descricao": "Alvarás, vigilância sanitária, licenças ambientais de crematório e auditoria.",
+          "aprendizados": [
+            "Manter o conjunto de licenças exigidas em dia",
+            "Preparar a operação para inspeção sanitária"
+          ],
+          "modulos": [
+            "1. Alvarás e licenças municipais",
+            "2. Vigilância sanitária: o que é inspecionado",
+            "3. Licenciamento ambiental de crematório",
+            "4. Auditoria interna e trilha documental"
+          ]
+        },
+        {
+          "codigo": "FA-503",
+          "nome": "Gestão de Pessoas e Cuidado com a Equipe",
+          "descricao": "Seleção para o perfil, fadiga por compaixão, suporte psicológico e rotatividade.",
+          "aprendizados": [
+            "Selecionar considerando o impacto emocional da função",
+            "Reconhecer fadiga por compaixão na equipe e agir antes do afastamento"
+          ],
+          "modulos": [
+            "1. Selecionar para uma função de alta carga emocional",
+            "2. Integração e acompanhamento dos primeiros meses",
+            "3. Fadiga por compaixão: sinais e prevenção",
+            "4. Suporte psicológico: o que oferecer e como",
+            "5. Rotatividade: causas reais no setor"
+          ]
+        },
+        {
+          "codigo": "FA-504",
+          "nome": "Indicadores e Qualidade",
+          "descricao": "KPIs operacionais e de satisfação, análise de ocorrências e melhoria contínua.",
+          "aprendizados": [
+            "Definir e acompanhar os indicadores que revelam problema de operação",
+            "Conduzir análise de ocorrência sem buscar culpado"
+          ],
+          "modulos": [
+            "1. Indicadores operacionais que importam",
+            "2. Indicadores de satisfação e reputação",
+            "3. Análise de ocorrências e causa raiz",
+            "4. Ciclo de melhoria contínua"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -26,6 +26,21 @@ divergência, mais barato é incorporar atualizações do LearnHouse.
   recursos do LearnHouse (coleções, cursos, capítulos, atividades, turmas, certificados)
 - [`implantacao.md`](implantacao.md) — roadmap de implantação em fases
 
+## Popular a instância com o currículo
+
+```bash
+cd scripts/funeral-academy
+python3 seed_curriculo.py --dry-run           # confere o que será criado
+ADMIN_PASSWORD='...' python3 seed_curriculo.py
+```
+
+Cria 21 cursos e 109 módulos a partir de `curriculo.json`, seguindo o desenho de
+[`curriculo.md`](curriculo.md). É idempotente — rodar de novo pula o que já existe.
+
+Os cursos entram **não publicados**: o script monta o esqueleto navegável (cursos, capítulos,
+objetivos de aprendizagem), não o conteúdo das lições. Publique pelo painel só depois da
+validação técnica e jurídica descrita abaixo.
+
 ## Aviso sobre conteúdo técnico e regulatório
 
 O currículo referencia legislação sanitária, trabalhista e de registros públicos, além de
