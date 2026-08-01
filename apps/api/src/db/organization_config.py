@@ -213,12 +213,16 @@ class AuthBrandingConfig(BaseModel):
 # ============================================================================
 
 class GeneralCustomization(BaseModel):
-    color: str = ""
+    # Stone — sober and dignified for the sector, and dark enough to carry
+    # white text at AA contrast on the navigation bar.
+    color: str = "#44403C"
     footer_text: str = ""
     favicon_image: str = ""
     # Self-branded deployment: the upstream watermark is never rendered.
     watermark: bool = False
-    font: str = ""
+    # Lexend is designed for reading proficiency and legibility. The audience
+    # skews older, so this is an accessibility choice before an aesthetic one.
+    font: str = "Lexend"
     # Funeral Academy serves a Brazilian audience — pt is the product default.
     default_language: str = "pt"
 

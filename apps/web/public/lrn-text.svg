@@ -1,8 +1,14 @@
 <svg width="1488" height="218" viewBox="0 0 1488 218" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Funeral Academy placeholder wordmark. Kept at the upstream 1488x218
-       viewBox so every call site keeps its layout untouched. Replace with the
-       real brand asset once the visual identity is defined. -->
-  <text x="744" y="109" fill="black" font-family="Georgia, 'Times New Roman', serif"
-        font-size="132" font-weight="700" letter-spacing="1"
-        text-anchor="middle" dominant-baseline="central">Funeral Academy</text>
+  <!-- Wordmark: arco + nome. Um SVG carregado via <img> não enxerga as fontes
+       da página, então a família aqui é uma pilha de sistema — nunca Lexend.
+       viewBox mantido em 1488x218 (o do upstream) para não mexer em layout. -->
+  <g transform="translate(96 46)" fill="none" stroke="black" stroke-width="14"
+     stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 118 V56 A38 38 0 0 1 84 56 V118"/>
+    <path d="M0 118 H92"/>
+  </g>
+  <text x="252" y="112" fill="black"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="118" font-weight="600" letter-spacing="-1"
+        dominant-baseline="central">Funeral Academy</text>
 </svg>

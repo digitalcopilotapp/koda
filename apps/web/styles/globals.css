@@ -2279,3 +2279,47 @@
   display: block;
 }
 
+
+/* ===========================================================================
+   Funeral Academy — legibilidade
+   ---------------------------------------------------------------------------
+   O público da academia é majoritariamente mais velho. Duas correções de base,
+   ambas proporcionais: escalam com o sistema de rem do Tailwind em vez de
+   redefinir tamanhos ponto a ponto, então nenhum layout é reescrito.
+
+   1. Base tipográfica de 16px para 17px (~6%). Tudo que usa rem acompanha.
+   2. O upstream aplica letter-spacing: -0.02em em html/body. Tracking negativo
+      aperta as letras e prejudica quem tem perda de sensibilidade ao contraste
+      — o desenho de letra do Lexend depende desse respiro. Neutralizado.
+
+   O que NÃO foi mexido: superfícies de vidro e sombras seguem como no upstream.
+   A estética permanece; o que muda é só o texto sobre ela.
+   =========================================================================== */
+
+html {
+  font-size: 17px;
+}
+
+html,
+body {
+  letter-spacing: normal;
+}
+
+/* Contraste do texto secundário -----------------------------------------------
+   O upstream usa text-gray-400 em 858 lugares e text-gray-300 em 280. Sobre
+   fundo branco isso dá 2,5:1 e 1,5:1 — a WCAG AA exige 4,5:1 para texto normal.
+   Falha para qualquer leitor; para o nosso público é o que decide se a frase é
+   lida ou ignorada.
+
+   Só a cor de TEXTO é corrigida. Bordas e fundos que usam os mesmos tokens
+   (border-gray-400, bg-gray-300) ficam intactos — escurecê-los engrossaria a
+   interface inteira. Por isso a correção é na utilitária, não na variável do
+   tema. Os tons são da família stone, para casar com a cor primária.
+
+   text-gray-500 (740 usos) já passa com 4,8:1 e não foi tocado. */
+@layer utilities {
+  .text-gray-300 { color: #7C766F; }  /* 4,49:1 */
+  .text-gray-400 { color: #6B655F; }  /* 5,75:1 */
+  .text-black\/30 { color: #7C766F; }
+  .text-black\/40 { color: #6B655F; }
+}
